@@ -302,7 +302,7 @@ static int validate_and_calculate_camera_metadata_entry_data_size(size_t *data_s
     // Check for overflow
     if (data_count != 0 &&
             camera_metadata_type_size[type] > (SIZE_MAX - DATA_ALIGNMENT + 1) / data_count) {
-        android_errorWriteLog(SN_EVENT_LOG_ID, "30741779");
+        //android_errorWriteLog(SN_EVENT_LOG_ID, "30741779");
         return ERROR;
     }
 
@@ -385,7 +385,7 @@ int validate_camera_metadata_structure(const camera_metadata_t *metadata,
         ALOGE("%s: Data count (%" PRIu32 ") should be <= data capacity "
               "(%" PRIu32 ")",
               __FUNCTION__, metadata->data_count, metadata->data_capacity);
-        android_errorWriteLog(SN_EVENT_LOG_ID, "30591838");
+        //android_errorWriteLog(SN_EVENT_LOG_ID, "30591838");
         return ERROR;
     }
 
